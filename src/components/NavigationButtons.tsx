@@ -24,7 +24,7 @@ export default function NavigationButtons() {
                 </button>
             )}
 
-            {/* Next button (only on steps 1–4), CurrentStep Logic */}
+            {/* Next button (only on steps 1–4), When clicking Next Button, CurrenStep is + 1 */}
             {currentStep < 5 && (
                 <button
                 onClick={() => dispatch({ type: "NEXT_STEP" })}

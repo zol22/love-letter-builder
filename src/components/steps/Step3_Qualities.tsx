@@ -5,14 +5,14 @@ export default function Step3_Qualities() {
     const { state, dispatch } = useLoveLetter();
     
     const qualities = [
-        "Kind",
-        "Funny",
-        "Intelligent",
-        "Adventurous",
-        "Supportive",
-        "Creative",
-        "Passionate",
-        "Empathetic"
+        "Kindness",
+        "Sense of humor",
+        "Intelligence",
+        "Adventurous spirit",
+        "Supportiveness",
+        "Creativity",
+        "Passion",
+        "Empathy"
     ];
     
     const handleToggleQuality = (quality: string) => {

@@ -3,6 +3,7 @@ import Step2_Name from "./steps/Step2_Name";
 import Step3_Qualities from "./steps/Step3_Qualities";
 import Step4_CustomMessage from "./steps/Step4_CustomMessage";
 import { useLoveLetter } from "../LoveLetterContext";
+import Step5_FinalLoveLetter from "./steps/Step5_FinalLoveLetter";
 
 export default function LoveLetterBuilder() {
     const { state } = useLoveLetter();
@@ -19,6 +20,9 @@ export default function LoveLetterBuilder() {
         {currentStep === 2 && <Step2_Name />}
         {currentStep === 3 && <Step3_Qualities />}
         {currentStep === 4 && <Step4_CustomMessage />}
+        {currentStep === 5 && <Step5_FinalLoveLetter />}
+
+        {/* Navigation buttons */}
      </div>
     );
 }
