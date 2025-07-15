@@ -48,11 +48,12 @@ type Action =
         return { ...state, tone: action.payload };
         case "SET_NAME":
         return { ...state, name: action.payload };
-        case "TOGGLE_QUALITY": {
+        case "TOGGLE_QUALITY": { // Check is the quality is in the list, if not, it is added. If it is, it is removed cause it means is being reselecting again meaning unselecting.
         const qualities = state.qualities.includes(action.payload)
             ? state.qualities.filter((q) => q !== action.payload)
-            : [...state.qualities, action.payload];
-        return { ...state, qualities };
+            : [...state.qualities, action.payload]; // quality is added
+        return { ...state, qualities }; // Return the new state with updated qualities
+
         }
         case "SET_CUSTOM_MESSAGE":
         return { ...state, customMessage: action.payload };
